@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto&family=Work+Sans:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+/* Set global font family and background color */
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url("./wave-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+/* Set container width and margins */
+.container {
+  max-width: auto;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Center main heading */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #21a1b3;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+@media print {
+  h1 {
+    color: #000;
+    text-shadow: none;
+  }
+}
+
+/* Style text input */
+input[type="text"] {
+  font-family: "Montserrat", sans-serif;
+  width: auto;
+  padding: 10px;
+  margin: 0 auto 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 18px;
+  display: block;
+}
+
+/* Style primary button */
+button {
+  font-family: "Montserrat", sans-serif;
+  background-color: #21a1b3;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+button:hover {
+  background-color: #2c387e;
+}
+
+/* Style card container */
+.card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  vertical-align: top;
+  backdrop-filter: blur(5px) hue-rotate(90deg);
+}
+
+.card:nth-child(4n) {
+  margin-right: 0;
+}
+
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Style for mobile */
+@media screen and (max-width: 768px) {
+  #card-container {
+    justify-content: center;
+  }
+
+  .card {
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+/* media query for a larger screen */
+@media screen and (min-width: 1400px) {
+  #card-container {
+    justify-content: space-between;
+  }
+
+  .card {
+    width: calc(20% - 10px);
+    margin-bottom: 20px;
+  }
+}
+
+/* Style card paragraph */
+.card p {
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Style subtask container */
+.subtask {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Style subtask text */
+.subtask-text {
+  flex-grow: 1;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+}
+
+/* Style subtask checkbox */
+.subtask-check {
+  margin-right: 10px;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  border: 2px solid #3f51b5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Style completed subtask */
+.subtask-complete {
+  text-decoration: line-through;
+  color: #b4a4a4;
+}
+
+/* Style delete button */
+.card button {
+  background-color: #cf4848;
+  margin-left: 10px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  transition: all 0.3s ease;
+  align-self: center;
+  display: inline-block;
+}
+
+.card button:hover {
+  background-color: #4bdb38;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timestamp {
+  font-family: "Source Code Pro", monospace;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.card.done {
+  backdrop-filter: blur(5px) hue-rotate(90deg);
+  background-color: rgba(0, 255, 0, 0.329);
+  color: white;
+}
